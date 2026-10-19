@@ -1,0 +1,7 @@
+,coef,se,p,來源
+jobsat_z:fam_importance_z,-0.0273,0.0155,0.0783,2022 重要性
+famsat_z:fam_importance_z,0.0253,0.0168,0.1312,2022 重要性
+jobsat_z:fo_z,0.005,0.0139,0.7198,2020 FO
+famsat_z:fo_z,-0.0089,0.0139,0.5202,2020 FO
+jobsat_z:bw_z,-0.0135,0.0092,0.1436,傳統分工單題
+famsat_z:bw_z,-0.002,0.0095,0.8342,傳統分工單題

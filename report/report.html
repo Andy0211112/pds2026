@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>幸福從哪裡來？家庭、子女與工作和幸福感的關係</title>
+<style>
+@page { size: A4; margin: 13mm 14mm 12mm 14mm; }
+:root {
+  --ink: #16201c; --ink2: #4b5651; --rule: #cfd5d1; --family: #2a78d6; --work: #eb6834; --econ: #1baf7a; --health: #8d8c86;
+  --stamp: #b1362f; --tint: #eef3f8; --ok: #137a55; --okbg: #dff3ea; --fail: #b1362f; --failbg: #f6e3e1; --part: #b5531f; --partbg: #fdebdd;
+  --serif: "Noto Serif CJK TC", "Noto Serif TC", serif;
+  --sans: "Noto Sans CJK TC", "Noto Sans TC", sans-serif;
+}
+* { box-sizing: border-box; }
+html { font-family: var(--sans); color: var(--ink); font-size: 9.2pt; line-height: 1.55; }
+body { margin: 0; }
+.page { page-break-after: always; break-after: page; position: relative; }
+.page:last-child { page-break-after: auto; }
+h1 { font-family: var(--serif); font-weight: 900; font-size: 25pt; line-height: 1.2; margin: 0 0 4pt; letter-spacing: .01em; }
+h2 { font-family: var(--serif); font-weight: 700; font-size: 12.5pt; margin: 9pt 0 4pt; padding-bottom: 2pt; border-bottom: 1.6pt solid var(--ink); }
+h3 { font-size: 10pt; margin: 7pt 0 2pt; font-weight: 700; }
+h3 .tag { display: inline-block; font-size: 8pt; font-weight: 700; color: #fff; background: var(--ink); padding: 0 5pt; border-radius: 2pt; margin-right: 5pt; vertical-align: 1pt; }
+h3 .tag.hyp { background: var(--econ); }
+h3 .tag.ans { background: var(--stamp); }
+p { margin: 0 0 4pt; text-align: justify; }
+.sub { font-family: var(--serif); font-size: 12.5pt; color: var(--ink2); margin: 0 0 10pt; }
+.team { font-size: 10pt; color: var(--ink2); margin-bottom: 12pt; }
+.team b { color: var(--ink); }
+.abstract { border-top: 1.6pt solid var(--ink); border-bottom: .6pt solid var(--rule); padding: 8pt 0 9pt; margin-bottom: 14pt; }
+.abstract b.lbl { font-family: var(--serif); font-size: 11pt; display: block; margin-bottom: 3pt; }
+.abstract p { font-size: 9.8pt; line-height: 1.7; }
+.kw { font-size: 8.8pt; color: var(--ink2); margin-top: 4pt; }
+.cover-fig { margin: 4pt 0 2pt; }
+.cover-fig img { width: 100%; display: block; }
+.cap { font-size: 7.8pt; color: var(--ink2); margin: 2pt 0 6pt; line-height: 1.45; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 11pt 12pt; margin-top: 10pt; }
+.card { border-left: 3pt solid var(--ink); padding: 3pt 0 3pt 8pt; }
+.card b { display: block; font-size: 10pt; margin-bottom: 1pt; }
+.card .big { font-family: var(--serif); font-weight: 900; font-size: 17pt; line-height: 1.15; color: var(--stamp); }
+.card p { font-size: 8.6pt; line-height: 1.5; margin: 0; text-align: left; }
+.card.f { border-color: var(--family); } .card.w { border-color: var(--work); } .card.g { border-color: var(--health); } .card.e { border-color: var(--econ); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; }
+.two-61 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 10pt; align-items: start; }
+.fig img { width: 100%; display: block; }
+table { border-collapse: collapse; width: 100%; font-size: 8.1pt; line-height: 1.4; margin: 2pt 0 5pt; }
+th, td { border-bottom: .5pt solid var(--rule); padding: 2pt 4pt; text-align: left; vertical-align: top; }
+th { border-bottom: 1pt solid var(--ink); font-weight: 700; }
+td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pipe { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7pt; margin: 4pt 0 6pt; }
+.pipe div { border: .8pt solid var(--ink); padding: 3.5pt 6pt; font-size: 7.9pt; line-height: 1.42; position: relative; }
+.pipe div b { display: block; font-size: 8.8pt; margin-bottom: 1pt; }
+.pipe .eq { display: block; font-family: var(--serif); font-size: 8.4pt; background: var(--tint); padding: 2pt 4pt; margin: 2pt 0 3pt; }
+.callout { background: var(--tint); padding: 5pt 8pt; margin: 4pt 0 6pt; font-size: 8.9pt; }
+.callout b { color: var(--family); }
+ul { margin: 0 0 4pt; padding-left: 13pt; }
+li { margin-bottom: 1.5pt; }
+.refs { columns: 3; column-gap: 10pt; font-size: 6.6pt; line-height: 1.3; }
+.p5 h2 { margin-top: 7pt; }
+.refs p { margin: 0 0 1.8pt; text-align: left; padding-left: 7pt; text-indent: -7pt; break-inside: avoid; }
+.small { font-size: 8.3pt; }
+.c-f { color: var(--family); font-weight: 700; } .c-w { color: var(--work); font-weight: 700; } .c-e { color: var(--econ); font-weight: 700; }
+.dmap { font-size: 7.6pt; margin: 2pt 0 2pt; }
+.dmap th, .dmap td { padding: 1.2pt 3pt; text-align: center; border-bottom: .5pt solid #fff; }
+.dmap th { border-bottom: 1pt solid var(--ink); font-weight: 700; }
+.dmap td:first-child, .dmap th:first-child { text-align: left; white-space: nowrap; }
+.dmap td.on { background: var(--ink2); border-left: 1.5pt solid #fff; }
+.dmap td.on.m-swb { background: #b1362f; } .dmap td.on.m-dom { background: #2a78d6; } .dmap td.on.m-imp { background: #1baf7a; }
+.dmap td.on.m-wfc { background: #eb6834; } .dmap td.on.m-life { background: #8d8c86; }
+.dmap td.part { box-shadow: inset 0 0 0 1pt #1baf7a; border-left: 1.5pt solid #fff; }
+.dmap td.role { text-align: left; color: var(--ink2); white-space: nowrap; }
+.story { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6pt; margin-top: 4pt; }
+.story div { border-top: 2.4pt solid var(--ink); padding-top: 4pt; font-size: 8.8pt; line-height: 1.55; }
+.story div b { display: block; font-family: var(--serif); font-size: 9.6pt; margin-bottom: 1pt; }
+.story div.turn { border-color: var(--stamp); } .story div.turn b { color: var(--stamp); }
+.story div.ans { border-color: var(--family); } .story div.ans b { color: var(--family); }
+.story-h { font-family: var(--serif); font-weight: 700; font-size: 11pt; margin: 18pt 0 4pt; }
+.exp { font-size: 8pt; margin: 3pt 0 4pt; }
+.exp td, .exp th { padding: 2.4pt 4pt; }
+.exp td:first-child { white-space: nowrap; font-weight: 700; }
+.v { display: inline-block; font-size: 7.4pt; font-weight: 700; padding: 0 4pt; border-radius: 2pt; white-space: nowrap; }
+.v.x { color: var(--fail); background: var(--failbg); } .v.p { color: var(--part); background: var(--partbg); } .v.o { color: var(--ok); background: var(--okbg); }
+.lead { font-size: 9.4pt; }
+.glance { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 10pt; margin-top: 16pt; padding-top: 7pt; border-top: .6pt solid var(--rule); font-size: 8.4pt; line-height: 1.5; color: var(--ink2); }
+.glance b { display: block; color: var(--ink); font-size: 8.8pt; margin-bottom: 1pt; }
+</style>
+</head>
+<body>
+
+<!-- ================= 第 1 頁：封面 ================= -->
+<section class="page">
+  <div style="font-size:8.5pt;letter-spacing:.14em;color:var(--ink2);margin-bottom:6pt">2026 資料科學漫步 · 資料科學敘事挑戰賽：超越預測 · 使用資料庫：家庭動態調查（PSFD）</div>
+  <h1>幸福從哪裡來？<br>家庭、子女與工作和幸福感的關係</h1>
+  <div class="sub">用 18 年追蹤資料，拆解台灣人的「幸福配方」</div>
+  <div class="team">隊名：<b>統實第一</b>　　隊員：<b>林元鴻、楊博達、謝濬遠</b></div>
+
+  <div class="abstract">
+    <b class="lbl">摘要</b>
+    <p>台灣工時全球第五長、出生數屢創新低，幸福究竟從哪裡來？本研究使用家庭動態調查 2007–2024 年 12 波、8,672 人的追蹤資料，先拆解幸福的組成：家庭占最大比重（32%），而且 18 年來逐步加重。接著檢驗「每個人有自己的權重」的假設：五個實驗顯示，自評的重視程度幾乎預測不了個人權重，同一個人的權重隔幾年就會改變；真正改變配方的是人生階段，有了孩子後家庭權重明顯上升，母親尤其明顯。</p>
+    <div class="kw">關鍵字：主觀幸福感、領域滿意度、個人化權重、追蹤資料、人生階段、資料敘事</div>
+  </div>
+
+  <div style="font-family:var(--serif);font-weight:700;font-size:11pt;margin-bottom:2pt">一張圖看懂：台灣上班族的幸福配方</div>
+  <div class="cover-fig"><img src="../figures/R1_recipe_bar.png" alt="幸福配方長條圖"></div>
+  <div class="cap">模型能解釋的幸福差異中，各領域滿意度「分到」的比例（Shapley 分解，RR2020–2024 有工作者 13,079 人次，模型 R² = 0.40）。</div>
+
+  <div class="cards">
+    <div class="card f"><b>家庭是幸福最大的來源</b><div class="big">32%</div><p>家庭占配方的三成，健康、工作、經濟各約兩成。家庭生活「很不滿意」少 20.7 分，「很滿意」只多 7.5 分：避免最差比追求最好重要。</p></div>
+    <div class="card f"><b>而且 18 年來越來越重</b><div class="big">0.25 → 0.32</div><p>家庭滿意度對幸福的影響（標準化係數）從 2007 到 2024 年逐步上升，控制年齡後依然成立；工作大致持平。</p></div>
+    <div class="card g"><b>「你說你重視什麼」猜不到你的權重</b><div class="big">&lt; 1.5%</div><p>重要性與態度題只能解釋個人權重差異的 1.5% 以下；同一個人的權重，隔幾年就不太一樣。</p></div>
+    <div class="card w"><b>真正改變配方的是孩子</b><div class="big">0.51 → 0.71</div><p>家庭權重（家庭 ÷［家庭＋工作］）：沒有小孩的女性 0.51，最小孩子 6–17 歲的媽媽 0.71；同階段的爸爸是 0.54。</p></div>
+  </div>
+
+  <div class="story-h">故事線：我們怎麼一路找到答案</div>
+  <div class="story">
+    <div><b>① 問題</b>台灣人的幸福排名亞洲第一，卻工時長、生得少。幸福到底從哪裡來？</div>
+    <div><b>② 配方</b>先拆解整體幸福：家庭占最大比重，而且 18 年來越來越重。</div>
+    <div><b>③ 假設</b>平均配方之外，每個人重視的不同，所以每個人應該有自己的權重。</div>
+    <div class="turn"><b>④ 實驗</b>重要性、態度、分群都猜不到權重；同一個人的權重隔幾年就變。</div>
+    <div class="ans"><b>⑤ 答案</b>權重跟著人生階段走：有了孩子，家庭變重，母親尤其明顯。</div>
+  </div>
+  <div class="glance"><div><b>資料</b>家庭動態調查 RR2007–RR2024，12 波、57,205 人次、8,672 人；主模型 RR2020–2024 有工作者 13,079 人次</div><div><b>方法</b>迴歸＋Shapley 分解、交互作用、分群與潛在類別、個人隨機斜率、用 2022 預測 2024</div><div><b>一句話</b>家庭過得好不好，是幸福最大的來源；有了孩子，這件事更重要</div></div>
+</section>
+
+<!-- ================= 第 2 頁：目的動機＋方法 ================= -->
+<section class="page">
+  <h2>一、研究目的與動機</h2>
+  <p>台灣在《世界幸福報告 2025》排名全球第 27、亞洲第一（Helliwell et al., 2025），但台灣人的年總工時 2,030 小時、全球第五長（勞動部，2025）；2025 年出生數 107,812 人、結婚 104,376 對，都是歷史新低（內政部，2026）。<b>當工作越來越長、家庭越來越晚成立，台灣人的幸福到底從哪裡來？</b></p>
+  <p>我們分兩步回答。第一步，<b>拆解幸福的組成</b>：把整體幸福看成各生活領域滿意度的組合（van Praag et al., 2003），看工作、家庭、經濟、健康各占多少、18 年來有沒有改變。第二步，<b>檢驗我們自己的假設</b>：華人的幸福觀特別重視家庭（Lu &amp; Gilmour, 2004），但有人以家庭為重、有人以事業為重，所以<b>每個人應該有自己的權重</b>，先算出權重再乘上分數，應能更準確地描述幸福。心理學的「情感幅度假說」則預測相反：人對在乎的領域本來就給出較極端的滿意度，重要性早已藏在滿意度裡（Wu &amp; Yao, 2006；Rohrer &amp; Schmukle, 2018）。本研究回答三個問題：</p>
+  <ul class="small">
+    <li><b>Q1 配方</b>：哪些生活領域影響整體幸福？各占多少？18 年來有沒有改變？</li>
+    <li><b>Q2 個人權重</b>：每個人的配方真的不同嗎？「你說你重視什麼」能不能預測它？</li>
+    <li><b>Q3 答案</b>：如果不能，是什麼在改變一個人的配方？結婚、生孩子又扮演什麼角色？</li>
+  </ul>
+
+  <h2>二、科學方法與工具</h2>
+  <h3>資料：家庭動態調查（PSFD）主樣本 RR2007–RR2024（于若蓉，2026 等各期）</h3>
+<table class="dmap"><tr><th>題組（全樣本）</th><th>07</th><th>08</th><th>09</th><th>10</th><th>11</th><th>12</th><th>14</th><th>16</th><th>18</th><th>20</th><th>22</th><th>24</th><th>角色</th></tr><tr><td>快樂、生活過得好不好</td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="role">幸福</td></tr><tr><td>工作、家庭滿意度、自評健康</td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="role">領域分數</td></tr><tr><td>經濟滿意度</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="on m-dom"></td><td class="role">領域分數</td></tr><tr><td>情緒 6 題</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="on m-swb"></td><td class="role">幸福</td></tr><tr><td>家庭價值重要性 8 題</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on m-imp"></td><td></td><td class="role">重視程度</td></tr><tr><td>婚姻態度、性別分工</td><td></td><td></td><td></td><td></td><td class="part"></td><td></td><td></td><td></td><td></td><td class="on m-imp"></td><td></td><td></td><td class="role">重視程度</td></tr><tr><td>職家衝突</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="on m-wfc"></td><td></td><td class="on m-wfc"></td><td class="role">機制</td></tr><tr><td>子女名冊（人數、年齡）</td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="on m-life"></td><td class="role">人生階段</td></tr></table>
+  <p class="small" style="margin-top:2pt">■ 該波全樣本都有此題組；□ 僅用於再測信度。<b>長期分析</b>（18 年趨勢、個人權重的穩定度）用 12 波共 57,205 人次、8,672 人，同一人最多被訪 12 次；<b>主模型</b>用唯一同時具備完整幸福題與經濟滿意度的 RR2020–2024，共 16,856 人次、6,357 人（三波都受訪 4,842 人）。</p>
+  <p class="small"><b>資料整理</b>：官方 25 個原始檔格式不一（8 個附 CSV、17 個只有 SPSS 檔，4 個中文亂碼），且同一題每年代號都不同。我們全部轉成 CSV、為每一年重建編碼簿，再寫成跨年對照表，逐一核對計分方向、遺漏值與選項代碼，並修正三個會直接影響結果的問題：(1) RR2024 編號改為 8 碼，需 ÷10 才能串接（原合併檔漏做，2022 與 2024 只對上 5 人）；(2) 子女變數由各波子女名冊重算（與直接題一致 96–99%）；(3) 婚姻態度題在 RR2022、2024 只訪問約 270、135 人，態度分析改用全樣本的 RR2020。</p>
+
+  <h3>測量</h3>
+  <table>
+    <tr><th>構念</th><th>題目</th><th>品質與依據</th></tr>
+    <tr><td>幸福指數（0–100）</td><td>快樂（1–7）、生活過得好不好（1–7）、情緒 6 題（1–4），三面向各轉 0–100 後平均</td><td>依 OECD（2013）主觀福祉指引涵蓋「生活評價」與「情緒」；α = 0.78–0.82；18 年分析用前兩題（與完整版 r = 0.95）</td></tr>
+    <tr><td>領域分數</td><td>工作、家庭生活、個人經濟滿意度（1–4）、自評健康（1–5）</td><td>皆反轉為越大越好；與幸福題分開，避免以自己預測自己</td></tr>
+    <tr><td>重視程度</td><td>家庭價值重要性 8 題（RR2022）；家庭導向 9 題（RR2020）</td><td>α = 0.80、0.74；再測相關 0.56–0.65（是穩定的態度）</td></tr>
+  </table>
+
+  <h3>模型：刻意保持簡單，把力氣放在解讀</h3>
+  <div class="pipe">
+    <div><b>① 幸福配方</b><span class="eq">幸福 = β<sub>家庭</sub>·家庭 + β<sub>工作</sub>·工作 + β<sub>經濟</sub>·經濟 + β<sub>健康</sub>·健康 + 控制變數</span>以 OLS 估計（控制年齡、性別、調查年、填答方式），再用 Shapley 分解把 R² 公平分給各領域，得到「配方比例」（Grömping, 2007）；逐年估計看 18 年趨勢。</div>
+    <div><b>② 個人權重</b><span class="eq">家庭權重 w = β<sub>家庭</sub> ÷（β<sub>家庭</sub> + β<sub>工作</sub>）</span>依序用五個實驗檢驗：重要性直接當權重、重要性／態度 × 滿意度、分群與潛在類別迴歸（DeSarbo &amp; Cron, 1988）、18 年追蹤的個人隨機斜率（Raudenbush &amp; Bryk, 2002）、人生階段 × 滿意度。個人化是否有用，以「用 2022 預測同一批人 2024」判斷。</div>
+    <div><b>③ 解讀與檢查</b>個人固定效果、交叉延宕（Hamaker et al., 2015）與生育、結婚前後的事件研究（Clark et al., 2008）幫助解讀方向；16 種替代設定、ordered logit（Ferrer-i-Carbonell &amp; Frijters, 2004）與允許任意交互作用的梯度提升樹（Friedman, 2001）確認結論不是模型選擇造成的。</div>
+  </div>
+  <p class="small"><b>工具與可重現性</b>：Python 3（pandas、statsmodels、linearmodels、scikit-learn），從原始檔到圖表都寫成 Jupyter notebook，可從頭重跑；程式碼見 <a href="https://github.com/Andy0211112/pds2026" style="color:inherit">github.com/Andy0211112/pds2026</a>（原始資料需向 SRDA 申請）。</p>
+</section>
+
+<!-- ================= 第 3 頁：成果（配方與趨勢、假設） ================= -->
+<section class="page">
+  <h2>三、成果展現</h2>
+  <h3><span class="tag">發現一</span>幸福的配方：家庭占最大，「很不滿意」的代價特別大</h3>
+  <div class="two-61" style="grid-template-columns:1.15fr 1fr">
+    <div>
+      <p>在有工作的受訪者中（RR2020–2024，13,079 人次），四個領域的滿意度加上基本控制變數，可以解釋幸福分數 40% 的差異（R² = 0.40）。把這部分解釋力公平分給各領域，<span class="c-f">家庭分到 32%</span>、健康 23%、<span class="c-w">工作 22%</span>、<span class="c-e">經濟 20%</span>（封面圖）。換成分數：家庭生活滿意度每高一級，幸福多 <b>8.3 分</b>（滿分 100）；工作 5.8 分、經濟 4.5 分、健康每好一級 5.1 分。</p>
+      <p>影響不是直線的：和「還算滿意」相比，家庭「很滿意」只多 7.5 分，「很不滿意」卻少 <b>20.7 分</b>，工作與經濟也是同樣的形狀（右圖）。<b>避免最差的情況，比追求最好更重要。</b></p>
+      <p>這個順序（家庭 &gt; 工作）在 16 種替代設定下全部成立，包括只用單一幸福題、面訪與網路自填分開、男女分開、各年分開；改用 ordered logit、改用已婚者的婚姻滿意度、或納入沒有工作的受訪者，結論都相同。</p>
+    </div>
+    <div class="fig"><img src="../figures/fig03b_nonlinear.png" alt="滿意度各級與幸福分數"><div class="cap">以「還算滿意」為基準，各級滿意度的幸福分數差異與 95% 信賴區間（控制其他領域與基本變項）。</div></div>
+  </div>
+
+  <h3><span class="tag">發現二</span>18 年來，家庭的分量越來越重：不只是因為樣本變老</h3>
+  <div class="two-61" style="grid-template-columns:1fr 1.15fr">
+    <div class="fig"><img src="../figures/R2_trend.png" alt="18 年趨勢"><div class="cap">各年分別估計的標準化係數與 95% 信賴區間（兩題版幸福分數；有工作者每年 2,021–4,887 人）。</div></div>
+    <div>
+      <p>家庭滿意度的標準化係數從 2007 年的 0.25 升到 2024 年的 <b>0.32</b>，工作大致持平，健康反而下降。PSFD 追蹤同一批人，樣本會逐年變老，而年紀越大越重視親密關係（Carstensen et al., 1999）。我們確實發現年齡每多 10 歲，家庭係數 +0.027；但<b>同時控制年齡後，年份趨勢仍是每 10 年 +0.046（p &lt; 0.001）</b>，而且 40 歲以下、40–49、50–59、60 歲以上每個年齡層在 2020 年代都比 2007–2012 年高。原始斜率也從每級 9.1 分升到 10.6 分，所以不是量尺改變。</p>
+      <p>第一幕的答案很清楚：<b>家庭是台灣上班族幸福最大的來源，而且越來越重。</b>但這是「平均」的配方——每個人都一樣嗎？</p>
+    </div>
+  </div>
+
+  <h3><span class="tag hyp">假設</span>每個人都有自己的配方嗎？</h3>
+  <p class="lead">我們的假設是：每個人重視工作與家庭的程度不同，所以每個人有自己的家庭權重 w。若這是真的，「說自己很重視家庭」的人家庭權重應該比較高，而且用每個人的權重預測幸福，應該比用全體權重更準。我們依序做了五個實驗，每一個的結果都決定了下一個要問什麼：</p>
+  <table class="exp">
+    <colgroup><col style="width:17%"><col style="width:22%"><col style="width:44%"><col style="width:17%"></colgroup>
+    <tr><th>實驗</th><th>問的問題</th><th>結果</th><th>學到什麼</th></tr>
+    <tr><td>① 重要性直接當權重</td><td>照原構想，把「多重視家庭」直接當成 w，再乘上分數</td><td>預測力比資料估計的全體權重低 1.5 個百分點，比四個領域等權重還低（圖 C）</td><td><span class="v x">失敗</span> 說出口的重視不是權重</td></tr>
+    <tr><td>② 重要性 × 滿意度</td><td>越重視家庭，家庭的斜率是否越大？</td><td>同年略有效果（重要性第 10 → 第 90 百分位，w 從 0.47 升到 0.61；圖 A），但控制人生階段後不顯著（p = 0.08–0.13）；家庭導向態度、「丈夫養家」單題都不顯著；預測兩年後只多 0.03 個百分點</td><td><span class="v x">失敗</span> 效果小又不穩</td></tr>
+    <tr><td>③ 分群與潛在類別</td><td>有沒有天生的「工作型」與「家庭型」？</td><td>讓 18 年資料自己把人分成 2–4 類，各類 w 只在 0.42–0.61；用態度猜一個人屬於哪類，AUC 0.48–0.56（0.5＝用猜的）</td><td><span class="v x">失敗</span> 沒有「工作型」的人</td></tr>
+    <tr><td>④ 每個人自己的斜率</td><td>不問態度，直接讓 6,018 人各有自己的工作、家庭斜率</td><td>個人差異確實存在（似然比檢定 p &lt; 0.001）；但同一個人 2007–14 與 2016–24 兩段的權重相關只有 0.10（態度題是 0.56–0.65）</td><td><span class="v p">轉折</span> 權重存在，但會變</td></tr>
+    <tr><td>⑤ 人生階段 × 滿意度</td><td>那什麼能預測權重？</td><td>有子女：家庭斜率 +0.083、工作 −0.076（p &lt; 0.01）；用 2022 預測 2024 時，人生階段是唯一仍明顯有幫助的個人化（圖 C）</td><td><span class="v o">成立</span> 答案是人生階段</td></tr>
+  </table>
+</section>
+
+<!-- ================= 第 4 頁：成果（答案）＋討論 ================= -->
+<section class="page">
+  <h3 style="margin-top:0"><span class="tag ans">發現三</span>個人權重存在，但它是「人生狀態」，不是性格；最大的推手是孩子</h3>
+  <div class="fig"><img src="../figures/R3_personal_weights.png" alt="個人權重的三個檢驗"></div>
+  <div class="cap">家庭權重 w = 家庭係數 ÷（家庭＋工作係數）；誤差線為 300 次 bootstrap 的 95% 區間。A：RR2022 有工作者 4,432 人；B：RR2020–2024 有工作者 13,079 人次；C：與資料估計的全體權重相比的 R² 差異，灰色為 2022 年 10 次 5 折交叉驗證，藍色為以 2022 估計的模型預測同一批人 2024 年的幸福。</div>
+  <div class="callout">五個實驗合起來的答案：<b>每個人的權重確實不同，但「你說你重視什麼」幾乎猜不到它（態度與人生階段合起來只解釋 1.5%），同一個人隔幾年也會改變</b>。最能預測權重的是孩子（圖 B）：沒有小孩時，家庭權重約一半（0.51–0.53）；有了 0–5 歲的孩子，爸媽都升到 0.64–0.70；孩子上學後出現分歧，<b>媽媽維持 0.71，爸爸回到 0.54</b>（95% 區間不重疊）。這與情感幅度假說一致：你在乎什麼，已經反映在你對它滿不滿意上，再乘一次權重沒有幫助。</div>
+
+  <h2>四、推論與討論</h2>
+  <h3>家庭權重從哪裡來？結婚、生孩子是「加大籌碼」，不是「保證報酬」</h3>
+  <div class="two-61" style="grid-template-columns:1.5fr 1fr">
+    <div>
+      <p>一個看似矛盾的發現：結婚和生孩子對「平均幸福」的影響其實不大。已婚者比未婚者多 3.5 分，但其中 57% 經由「家庭生活滿不滿意」；同一個人結婚前後的幸福變化不顯著（+0.08 個標準差，p = 0.11）；有沒有孩子、孩子幾歲，平均幸福也沒有顯著差異。第一個孩子出生前幸福先升高、出生後回落，與德英追蹤研究的形狀相同（Myrskylä &amp; Margolis, 2014）。那家庭的權重從哪裡來？</p>
+      <p>關鍵在於：<b>權重看的是「家庭過得好不好」，不是「有沒有家庭」</b>。婚姻、子女、收入、工時等客觀條件，只能解釋家庭滿意度的約一成；同樣已婚有孩子，有人家庭美滿，有人衝突不斷。右圖顯示，家庭生活很不滿意的已婚者並不比單身的人快樂，很滿意時則最快樂：<b>結婚沒有把整條線往上移，而是讓線變陡</b>。有了孩子也一樣，生活重心移到家庭，家庭好壞對幸福的牽動變大，權重上升；但順利時更幸福、不順時也傷得更重，平均起來與沒有孩子的人差不多。</p>
+    </div>
+    <div class="fig"><img src="../figures/R5_marriage.png" alt="婚姻與家庭滿意度"><div class="cap">RR2020–2024 全體受訪者，依家庭生活滿意度與婚姻狀態分組的平均幸福分數與 95% 信賴區間。</div></div>
+  </div>
+  <p>家庭的 32% 也不全是「家庭讓人幸福」。同一個人自己跟自己比（個人固定效果），工作與家庭滿意度變好時，幸福都上升約 0.16 個標準差，一樣重；只有人與人之間比較時，家庭才明顯較大（0.28 vs 0.23），表示家庭好不好多半是長期狀態。交叉延宕也顯示，「這一波的幸福 → 下一波的家庭滿意度」（0.15）比反方向（0.10）更強：快樂的人也比較會覺得家庭很好，與工作滿意度的後設分析結果一致（Bowling et al., 2010）。因此本研究的「權重」應解讀為<b>幸福與各領域一起變動的程度</b>，而不是純粹的因果效果。</p>
+</section>
+
+<!-- ================= 第 5 頁：討論、創新、致謝、文獻 ================= -->
+<section class="page p5">
+  <p style="margin-top:0"><b>對個人的意義。</b>與其問「要不要結婚、要不要生孩子」，不如問「家庭生活過得好不好」；而任何一個領域落到「很不滿意」的代價都很大，避免最差的情況比追求最好更划算。</p>
+  <p><b>對政策與職場的意義。</b>有孩子的人，尤其是母親，幸福更依賴家庭；而在 RR2020、RR2024 的 8,057 人次中，<b>控制工作與家庭滿意度後，職家衝突每高一個標準差，幸福仍再降 0.18 個標準差</b>（Allen et al., 2000）。跨國研究發現，育兒假、彈性工時、托育等職家平衡政策越完整的國家，父母與非父母的幸福差距越小（Glass et al., 2016）。在少子化與長工時並存的台灣，減少職家衝突可能是同時照顧幸福與生育意願的切入點。</p>
+  <p><b>研究限制。</b>(1) 觀察性資料，固定效果與交叉延宕只能排除部分混淆；(2) 主分析對象是有工作者，2020–2024 受訪者皆在 27 歲以上；(3) 未使用抽樣權數，結果描述的是 PSFD 樣本；(4) 面訪者傾向回報較高的家庭與經濟滿意度（Tu &amp; Yu, 2026），我們控制填答方式並分開估計，結論不變；(5) 個人權重前後相關偏低，一部分可能來自測量誤差，但同樣有測量誤差的態度題前後相關高得多。</p>
+
+  <h2>五、創新性與延伸性</h2>
+  <ul class="small">
+    <li><b>把直覺變成可檢驗的假設，並把失敗寫進故事</b>：五個實驗依序進行，前三個失敗、第四個帶來轉折、第五個找到答案；每一次失敗都縮小了答案的範圍。</li>
+    <li><b>用 18 年追蹤資料檢驗「個人權重穩不穩定」</b>：過去以單一年份研究重要性加權（Wu &amp; Yao, 2006；Rohrer &amp; Schmukle, 2018），看不到權重會隨人生階段改變；我們發現權重比較像「狀態」而不是「性格」。</li>
+    <li><b>用「預測兩年後」評估個人化</b>，而不是同年交叉驗證，避免把只在同一份資料成立的關係誤當成規律；也用允許任意交互作用的機器學習確認沒有被簡單模型漏掉的個人化（R² 同為 0.4027）。</li>
+    <li><b>延伸方向</b>：加入人際（寂寞感）、休閒等生活領域；以跨國資料比較不同社會的配方；追蹤托育、育嬰假改革前後家庭權重的變化；企業可依員工的人生階段設計職家平衡措施。資料整合中發現的編號與子女名冊問題，也可回饋其他 PSFD 使用者。</li>
+  </ul>
+
+  <h2>致謝</h2>
+  <p class="small">本研究使用資料係採自中央研究院人文社會科學研究中心調查研究專題中心「家庭動態調查」（RR2007–RR2024），由學術調查研究資料庫（SRDA）提供，謹致謝忱；以上作者與單位對本研究內容不負任何責任。本研究無接受經費補助，非源自學位論文或其他研究計畫。<b>生成式 AI 使用揭露</b>：本研究使用 Anthropic Claude 協助資料整理、程式撰寫與執行、文獻查找與文稿草擬；研究問題、分析決策與結論經團隊逐一檢核，團隊對內容負完全責任。</p>
+
+  <h2>參考文獻</h2>
+  <div class="refs">
+    <p>內政部（2026）。114 年人口統計：出生數、結婚對數（2026 年 1 月發布）。轉引自 AsiaNews（2026/01/12）。</p>
+    <p>勞動部（2025）。2024 年國際勞動統計：全年總工時。轉引自台灣英文新聞（2025/11/24）。</p>
+    <p>于若蓉（2026）。家庭動態調查：2024 追蹤問卷（RR2024）（C00411_1）【原始數據】。中央研究院人社中心調查研究專題中心學術調查研究資料庫。https://doi.org/10.6141/TW-SRDA-C00411_1-1（RR2007–RR2022 各期同此格式引用）</p>
+    <p>Allen, T. D., Herst, D. E. L., Bruck, C. S., &amp; Sutton, M. (2000). Consequences associated with work-to-family conflict. <i>Journal of Occupational Health Psychology, 5</i>(2), 278–308.</p>
+    <p>Bowling, N. A., Eschleman, K. J., &amp; Wang, Q. (2010). A meta-analytic examination of the relationship between job satisfaction and subjective well-being. <i>Journal of Occupational and Organizational Psychology, 83</i>(4), 915–934. https://doi.org/10.1348/096317909X478557</p>
+    <p>Carstensen, L. L., Isaacowitz, D. M., &amp; Charles, S. T. (1999). Taking time seriously: A theory of socioemotional selectivity. <i>American Psychologist, 54</i>(3), 165–181.</p>
+    <p>Clark, A. E., Diener, E., Georgellis, Y., &amp; Lucas, R. E. (2008). Lags and leads in life satisfaction: A test of the baseline hypothesis. <i>The Economic Journal, 118</i>(529), F222–F243.</p>
+    <p>DeSarbo, W. S., &amp; Cron, W. L. (1988). A maximum likelihood methodology for clusterwise linear regression. <i>Journal of Classification, 5</i>, 249–282.</p>
+    <p>Ferrer-i-Carbonell, A., &amp; Frijters, P. (2004). How important is methodology for the estimates of the determinants of happiness? <i>The Economic Journal, 114</i>(497), 641–659.</p>
+    <p>Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. <i>Annals of Statistics, 29</i>(5), 1189–1232.</p>
+    <p>Glass, J., Simon, R. W., &amp; Andersson, M. A. (2016). Parenthood and happiness: Effects of work-family reconciliation policies in 22 OECD countries. <i>American Journal of Sociology, 122</i>(3), 886–929.</p>
+    <p>Grömping, U. (2007). Estimators of relative importance in linear regression based on variance decomposition. <i>The American Statistician, 61</i>(2), 139–147.</p>
+    <p>Hamaker, E. L., Kuiper, R. M., &amp; Grasman, R. P. P. P. (2015). A critique of the cross-lagged panel model. <i>Psychological Methods, 20</i>(1), 102–116.</p>
+    <p>Helliwell, J. F., et al. (Eds.) (2025). <i>World Happiness Report 2025</i>. Wellbeing Research Centre, University of Oxford.</p>
+    <p>Lu, L., &amp; Gilmour, R. (2004). Culture and conceptions of happiness: Individual oriented and social oriented SWB. <i>Journal of Happiness Studies, 5</i>(3), 269–291.</p>
+    <p>Myrskylä, M., &amp; Margolis, R. (2014). Happiness: Before and after the kids. <i>Demography, 51</i>(5), 1843–1866.</p>
+    <p>OECD (2013). <i>OECD Guidelines on Measuring Subjective Well-being</i>. OECD Publishing.（2025 年更新版）</p>
+    <p>Raudenbush, S. W., &amp; Bryk, A. S. (2002). <i>Hierarchical Linear Models</i> (2nd ed.). Sage.</p>
+    <p>Rohrer, J. M., &amp; Schmukle, S. C. (2018). Individual importance weighting of domain satisfaction ratings does not increase validity. <i>Collabra: Psychology, 4</i>(1), 6.</p>
+    <p>Tu, S.-H., &amp; Yu, R.-R. (2026). Respondent characteristics' moderating effect on mixed-mode effects: An example of subjective well-being measurements. <i>International Journal of Social Research Methodology, 29</i>(1), 95–105. https://doi.org/10.1080/13645579.2025.2483771</p>
+    <p>van Praag, B. M. S., Frijters, P., &amp; Ferrer-i-Carbonell, A. (2003). The anatomy of subjective well-being. <i>Journal of Economic Behavior &amp; Organization, 51</i>(1), 29–49.</p>
+    <p>Wu, C.-H., &amp; Yao, G. (2006). Do we need to weight item satisfaction by item importance? A perspective from Locke's range-of-affect hypothesis. <i>Social Indicators Research, 79</i>(3), 485–502.</p>
+  </div>
+</section>
+</body>
+</html>
